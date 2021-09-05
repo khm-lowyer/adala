@@ -19,22 +19,24 @@ app.get("/",(req, res)=>{
 app.post("/form",(req, res)=>{
     const data = req.body;
     console.log(data);
-    let testAccount = nodemailer.createTestAccount();
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
+    service: 'roundcube',
     host: "mail.khm-lawyers.com",
-    port: 587,
+    port: 25,//587
     secure: false, // true for 465, false for other ports
     auth: {
       user: "contacts@khm-lawyers.com", // generated ethereal user
-      pass: "khm123456", // generated ethereal password
+      pass: "khm123456" // generated ethereal password
     },
+    tls:{rejectUnauthorized:false},
+    authMethod : 'PLAIN',
   });
-
+  console.log(data.email);
   // send mail with defined transport object
   let info = transporter.sendMail({
-    from: '"تاكيد تسجيل 👻" <contacts@khm-lawyers.com>', // sender address
+    from: '"تاكيد تسجيل" <contacts@khm-lawyers.com>', // sender address
     to: data.email, // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world?", // plain text body
