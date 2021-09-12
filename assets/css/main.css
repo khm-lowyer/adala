@@ -117,6 +117,9 @@ section{
 	background-image: url(../images/header.jpg);
 	height: 100vh;
 	position: relative;
+	background-size: cover;
+	/* background-position: center; */
+	background-repeat: no-repeat;
 }
 .intro-box{
 	height: 100vh;
@@ -377,6 +380,10 @@ section{
 .team-box h3{
 	/*font-weight: 700;*/
 }
+.flags{
+	background-image: url("/assets/images/golf_cantry.jpg");
+	
+}
 
 
 
@@ -385,6 +392,9 @@ section{
 /**********************
 		Clients
 **********************/
+.clients{
+	background-color: #5b6b8d;
+}
 .client-box{
 	margin-bottom: 30px;
 }
