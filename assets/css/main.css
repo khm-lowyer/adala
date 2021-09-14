@@ -381,11 +381,28 @@ section{
 	/*font-weight: 700;*/
 }
 .flags{
-	background-image: url("/assets/images/golf_cantry.jpg");
-	
+	background-image: url(../images/golf_cantry.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 20%;
+	color: white;
+	margin-bottom: 20%;
 }
-
-
+.flags h1{
+	margin: 0px;
+	text-align: center;
+	padding: 5%;
+}
+.viedo-section{
+text-align: center;
+padding: 0%;
+margin-top: 5%;
+}
+.viedo-section video{
+width: 70%;
+height: 60%;
+}
 
 
 
