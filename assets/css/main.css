@@ -349,6 +349,10 @@ section{
 	margin-bottom: -70px;
 }
 
+.intro-sec{
+	margin-top: 16%;
+	color: white;
+}
 
 /**********************
 		Team
@@ -524,6 +528,7 @@ height: 60%;
 .input-group-addon, .form-control{
 	background-color: #fff;
 	border-color: transparent;
+	margin-bottom: 1%;
 }
 .contact .input-group{
 	padding-bottom: 20px;
