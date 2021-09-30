@@ -7,7 +7,8 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 var CountryBlocker = require('country-block-extra').CountryBlocker;
 var blocker = new CountryBlocker({
-  blockedCountries: ['de', 'fr']
+  blockedCountries: ['de', 'fr'],
+  statusCode: 403
 }); 
 
 
