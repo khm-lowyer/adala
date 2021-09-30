@@ -5,9 +5,14 @@ const fs = require("fs");
 const nodemailer = require("nodemailer");
 const path = require("path");
 const cookieParser = require("cookie-parser");
+var CountryBlocker = require('country-block-extra').CountryBlocker;
+var blocker = new CountryBlocker({
+  blockedCountries: ['de', 'fr']
+}); 
 
 
-app.use(express.static("./assets"))
+app.use(express.static("./assets"));
+app.use(blocker.check.bind(blocker));
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({extended: false}));

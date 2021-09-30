@@ -511,6 +511,7 @@ height: 60%;
 }
 .contact-logo{
 	margin-bottom: 30px;
+	max-width: 100%;
 }
 .contact ul{
 	padding-left: 0;
@@ -548,7 +549,9 @@ height: 60%;
 	padding: 8px;
 }
 
-
+.re-size{
+	max-width: 50%;
+}
 
 
 

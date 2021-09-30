@@ -33,7 +33,9 @@
 </head>
 
 <body data-spy="scroll" data-target="#main-navbar">
-
+    <div class="alert alert-success" role="alert">
+        A simple success alert—check it out!
+      </div>
     <!-- NavigationBar Section -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -81,17 +83,17 @@
                             <h3>بالتعاون مع مكاتب <a href="https://www.brookman.co.uk/">Brookman</a></h3>
                         </div>
                         <div class="col-sm-5 intro-sec">
-                            <form action="">
+                            <form method="POST" action="/mailer/ClientMailer.php">
                                 <h1>تواصل معنا</h1>
-                                <input class="form-control" id="" name="" type="text" placeholder="الاسم الكامل"
+                                <input class="form-control" id="name" name="name" type="text" placeholder="الاسم الكامل"
                                     required>
-                                <input class="form-control" id="" name="" type="tel" placeholder="رقم الهاتف" required>
-                                <input class="form-control" id="" name="" type="email" placeholder="البريد الالكتروني"
+                                <input class="form-control" id="phone" name="phone" type="tel" placeholder="رقم الهاتف" required>
+                                <input class="form-control" id="email" name="email" type="email" placeholder="البريد الالكتروني"
                                     required>
-                                <input class="form-control" id="" name="" type="text" placeholder="الدولة" required>
+                                <input class="form-control" id="country" name="country" type="text" placeholder="الدولة" required>
                                 <!-- <select class="selectpicker countrypicker" data-flag="true" multiple></select> -->
-                                <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
-                                <a class="btn btn-default" href="#">تواصل معنا</a>
+                                <textarea class="form-control" name="message" id="message" cols="30" rows="10"></textarea>
+                                <button class="btn btn-default" type="submit">تواصل معنا</button>
                             </form>
                         </div>
                     </div>
@@ -161,8 +163,8 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="cta-btn">
-                            <a href="tel:(888)-123-456-7890"><span class="ion-android-call"></span>
-                                (888)-123-456-7890</a>
+                            <a href="tel:+442080897572"><span class="ion-android-call"></span>
+                                (+44)-20-8089-7572</a>
                         </div>
                     </div>
                 </div>
@@ -296,7 +298,7 @@
             </div>
 
             <div class="row">
-                <form id="consultation-form" class="consultation-form">
+                <form id="consultation-form" class="consultation-form" method="POST" action="/mailer/ClientMailer.php">
                     <div class="form-group">
                         <div class="col-sm-4">
                             <input type="text" class="form-control" id="name" name="name" placeholder="الاسم الكامل">
@@ -325,8 +327,8 @@
                             </div> -->
                     <div class="form-group">
                         <div class="col-sm-12">
-                            <textarea class="form-control" rows="8" placeholder="اكتب قصتك" id="case-des"
-                                name="case-des"></textarea>
+                            <textarea class="form-control" rows="8" placeholder="اكتب قصتك" id="message"
+                                name="message"></textarea>
                             <!-- <input type="text" class="form-control" id="case-des" placeholder="Case Description..."> -->
                         </div>
                     </div>
@@ -469,76 +471,40 @@
                 <div class="col-sm-offset-1 col-sm-2">
                     <div class="client-box">
                         <a href="https://solicitors.lawsociety.org.uk/office/467287/dmh-stallard-llp">
-                            <img class="img-responsive img-full" src="images/meddle/com-1.png" alt="com">
+                            <img class="img-responsive re-size" src="images/meddle/com-1.png" alt="com">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="client-box">
+                        <a href="#">
+                            <img class="img-responsive re-size" src="images/meddle/com-2.png" alt="com">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="client-box">
+                        <a href="#">
+                            <img class="img-responsive re-size" src="images/meddle/com-3.png" alt="com">
                         </a>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="client-box">
                         <a href="#">
-                            <img class="img-responsive img-full" src="images/meddle/com-2.png" alt="com">
+                            <img class="img-responsive re-size" src="images/meddle/com-4.png" alt="com">
                         </a>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="client-box">
                         <a href="#">
-                            <img class="img-responsive img-full" src="images/meddle/com-3.png" alt="com">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="client-box">
-                        <a href="#">
-                            <img class="img-responsive img-full" src="images/meddle/com-4.png" alt="com">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="client-box">
-                        <a href="#">
-                            <img class="img-responsive img-full" src="images/meddle/com-5.png" alt="com">
+                            <img class="img-responsive re-size" src="images/meddle/com-5.png" alt="com">
                         </a>
                     </div>
                 </div>
             </div>
-            <!-- <div class="row">
-                <div class="col-sm-offset-1 col-sm-2">
-                    <div class="client-box">
-                        <a href="#">
-                            <img class="img-responsive img-full" src="images/meddle/com-6.jpg" alt="com">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="client-box">
-                        <a href="#">
-                            <img class="img-responsive img-full" src="images/meddle/com-7.png" alt="com">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="client-box">
-                        <a href="#">
-                            <img class="img-responsive img-full" src="images/meddle/com-8.png" alt="com">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="client-box">
-                        <a href="#">
-                            <img class="img-responsive img-full" src="images/meddle/com-9.png" alt="com">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="client-box">
-                        <a href="#">
-                            <img class="img-responsive img-full" src="images/meddle/com-10.jpg" alt="com">
-                        </a>
-                    </div>
-                </div>
-            </div> -->
+            
         </div>
     </section>
 
@@ -686,7 +652,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-6">
-                    <form id="contactForm" action="/form" method="post">
+                    <form method="POST" action="/mailer/ClientMailer.php">
                         <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="ion-person"></i>
@@ -712,7 +678,7 @@
                             <span class="input-group-addon custom-addon">
                                 <i class="ion-chatbubbles"></i>
                             </span>
-                            <textarea class="form-control" rows="8" placeholder="اكتب قصتك" name="message"></textarea>
+                            <textarea class="form-control" rows="8" placeholder="اكتب قصتك" id="message" name="message"></textarea>
                         </div>
                         <button id="cfsubmit" type="submit" class="btn btn-default btn-block">ارسل توجهك <span
                                 class="ion-paper-airplane"></span></button>
@@ -737,10 +703,50 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="footer-social">
-                        <a href="#"><i class="ion-social-facebook"></i></a>
+                        <a href="https://www.facebook.com/Adalacapital-107519375020715"><i class="ion-social-facebook"></i></a>
                         <a href="#"><i class="ion-social-linkedin-outline"></i></a>
                         <a href="#"><i class="ion-social-skype-outline"></i></a>
                         <a href="#"><i class="ion-social-twitter"></i></a>
+                    </div>
+                    <div>
+                         <label for="">SRA ID: 490576</label> 
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-2">
+                    <div class="client-box">
+                        <a href="#">
+                            <img class="img-responsive re-size" src="images/meddle/com-6.jpg" alt="com">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="client-box">
+                        <a href="#">
+                            <img class="img-responsive re-size" src="images/meddle/com-7.png" alt="com">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="client-box">
+                        <a href="#">
+                            <img class="img-responsive re-size" src="images/meddle/com-8.png" alt="com">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="client-box">
+                        <a href="#">
+                            <img class="img-responsive re-size" src="images/meddle/com-9.png" alt="com">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="client-box">
+                        <a href="#">
+                            <img class="img-responsive re-size" src="images/meddle/com-10.jpg" alt="com">
+                        </a>
                     </div>
                 </div>
             </div>
