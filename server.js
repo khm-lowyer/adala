@@ -5,12 +5,19 @@ const fs = require("fs");
 const nodemailer = require("nodemailer");
 const path = require("path");
 const cookieParser = require("cookie-parser");
+
 var CountryBlocker = require('country-block-extra').CountryBlocker;
 var blocker = new CountryBlocker({
   blockedCountries: ['de', 'fr'],
   statusCode: 403
 }); 
 
+var ipgeoblock = require("node-ipgeoblock");
+var app = express();
+app.use(ipgeoblock({
+    geolite2: "./GeoLite2-Country.mmdb",
+    blockedCountries: [ "FR", "GB", "DE" ]
+}));
 
 app.use(express.static("./assets"));
 app.use(blocker.check.bind(blocker));
